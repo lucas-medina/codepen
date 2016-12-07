@@ -27,11 +27,11 @@ You can download Node at https://nodejs.org/en/. It already comes with NPM, whic
 Ruby already comes on OSX as far as I know. Either way, you can get to Ruby language's homepage for more info (https://www.ruby-lang.org/en/downloads/). For Windows users, the quick way to install Ruby is with Ruby Installer, which provides many different versions for Windows. (http://rubyinstaller.org/)
 
 ### How to use
-Simple thing:
+It's actually pretty simple:
 - Install all node modules through ```npm install```. After that...
-- ```grunt kick``` does the magic for you. Also, if you just try ```grunt```, it'll most certainly ask you to perform a ```grunt kick```. Don't blame me, kicks are important for blood circulation, it seems.
+- You need to specify a pen: ```grunt --pen=my-new-codepen-project``` does the magic for you.
 
-### Also...
-Unfortunately, 'Kick it' is not yet ready for build samples. Eg.: Minifying files, setting inline code, among many other build tasks. Version 0.1.0 is focused on creating development environments.
+If no pen is specified, Grunt workflow won't do anything.
+I'm currently planning on having a different command that compiles all the projects (a future idea).
 
 Current version is **0.1.0**. More information will be coming in time.

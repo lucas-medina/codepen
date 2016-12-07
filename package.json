@@ -1,7 +1,7 @@
 {
-  "name": "KickIt",
-  "version": "0.0.1",
-  "description": "Personal automated workflow to skyrocket small projects through Grunt!",
+  "name": "Codepen",
+  "version": "0.1.0",
+  "description": "Codepen workflow for multiple different projects",
   "private": "true",
   "repository": {
     "type": "git",
