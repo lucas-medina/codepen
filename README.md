@@ -2,10 +2,13 @@
 Workflow for building multiple pens on Codepen!
 
 ## Introduction
-Welcome to my Codepen workflow. It doesn't 
+Welcome to my Codepen workflow. Its sole purpose is to enable building different pens to Codepen, while using the same modules on Grunt.
+This way, you can start multiple mini-projects without having to install the modules again and again.
+
+It works like my main workflow project, [Kickit](https://github.com/lucas-medina/kickit), in a very similar way.
 
 ### Specification
-'Kick It' uses the following Grunt plugins within its settings:
+The workflow uses the following Grunt plugins within its settings:
 
 - grunt-browser-sync
 - grunt-contrib-concat

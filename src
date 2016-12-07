@@ -1,115 +1,226 @@
-/* Slider */
-.slick-slider
-{
-    position: relative;
-
-    display: block;
-    box-sizing: border-box;
-
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-
-    -webkit-touch-callout: none;
-    -khtml-user-select: none;
-    -ms-touch-action: pan-y;
-        touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
+@-webkit-keyframes flip {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
 }
 
-.slick-list
-{
-    position: relative;
-
-    display: block;
-    overflow: hidden;
-
-    margin: 0;
-    padding: 0;
-}
-.slick-list:focus
-{
-    outline: none;
-}
-.slick-list.dragging
-{
-    cursor: pointer;
-    cursor: hand;
+@keyframes flip {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
 }
 
-.slick-slider .slick-track,
-.slick-slider .slick-list
-{
-    -webkit-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+body {
+  margin: 0;
+  background-color: #345da9;
 }
 
-.slick-track
-{
-    position: relative;
-    top: 0;
-    left: 0;
-
-    display: block;
-}
-.slick-track:before,
-.slick-track:after
-{
-    display: table;
-
-    content: '';
-}
-.slick-track:after
-{
-    clear: both;
-}
-.slick-loading .slick-track
-{
-    visibility: hidden;
+#page-wrapper h1, #page-wrapper h2, #page-wrapper p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  padding: 1em 20px;
+  color: #fff;
+  margin: 0;
 }
 
-.slick-slide
-{
-    display: none;
-    float: left;
+#page-wrapper h1 {
+  font-size: 42px;
+  background-color: #1d438a;
+}
 
-    height: 100%;
-    min-height: 1px;
+#page-wrapper h2 {
+  font-size: 28px;
+  font-weight: normal;
 }
-[dir='rtl'] .slick-slide
-{
-    float: right;
-}
-.slick-slide img
-{
-    display: block;
-}
-.slick-slide.slick-loading img
-{
-    display: none;
-}
-.slick-slide.dragging img
-{
-    pointer-events: none;
-}
-.slick-initialized .slick-slide
-{
-    display: block;
-}
-.slick-loading .slick-slide
-{
-    visibility: hidden;
-}
-.slick-vertical .slick-slide
-{
-    display: block;
 
-    height: auto;
-
-    border: 1px solid transparent;
+#page-wrapper p {
+  font-weight: normal;
+  font-size: 14px;
 }
-.slick-arrow.slick-hidden {
-    display: none;
+
+.animation-container {
+  font-size: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+.animation-container:hover span {
+  padding: 90px 0;
+}
+
+.animation-container:active span {
+  padding: 120px 0;
+  opacity: .9;
+}
+
+.animation-container span {
+  display: inline-block;
+  width: 4%;
+  padding: 45px 0;
+  background-color: red;
+  transition: .2s ease;
+  -webkit-animation: flip 1s cubic-bezier(0.79, 0.05, 0.58, 1) 0s infinite alternate both;
+          animation: flip 1s cubic-bezier(0.79, 0.05, 0.58, 1) 0s infinite alternate both;
+}
+
+.animation-container span:nth-child(25n+1) {
+  background-color: #213098;
+  -webkit-animation-delay: 0.05s;
+          animation-delay: 0.05s;
+}
+
+.animation-container span:nth-child(25n+2) {
+  background-color: #213095;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.animation-container span:nth-child(25n+3) {
+  background-color: #213092;
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+
+.animation-container span:nth-child(25n+4) {
+  background-color: #21308f;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.animation-container span:nth-child(25n+5) {
+  background-color: #21308c;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.animation-container span:nth-child(25n+6) {
+  background-color: #213089;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.animation-container span:nth-child(25n+7) {
+  background-color: #213086;
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+}
+
+.animation-container span:nth-child(25n+8) {
+  background-color: #213083;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.animation-container span:nth-child(25n+9) {
+  background-color: #213080;
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+}
+
+.animation-container span:nth-child(25n+10) {
+  background-color: #21307d;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.animation-container span:nth-child(25n+11) {
+  background-color: #21307a;
+  -webkit-animation-delay: 0.55s;
+          animation-delay: 0.55s;
+}
+
+.animation-container span:nth-child(25n+12) {
+  background-color: #213077;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.animation-container span:nth-child(25n+13) {
+  background-color: #213074;
+  -webkit-animation-delay: 0.65s;
+          animation-delay: 0.65s;
+}
+
+.animation-container span:nth-child(25n+14) {
+  background-color: #213071;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.animation-container span:nth-child(25n+15) {
+  background-color: #21306e;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+.animation-container span:nth-child(25n+16) {
+  background-color: #21306b;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.animation-container span:nth-child(25n+17) {
+  background-color: #213068;
+  -webkit-animation-delay: 0.85s;
+          animation-delay: 0.85s;
+}
+
+.animation-container span:nth-child(25n+18) {
+  background-color: #213065;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.animation-container span:nth-child(25n+19) {
+  background-color: #213062;
+  -webkit-animation-delay: 0.95s;
+          animation-delay: 0.95s;
+}
+
+.animation-container span:nth-child(25n+20) {
+  background-color: #21305f;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.animation-container span:nth-child(25n+21) {
+  background-color: #21305c;
+  -webkit-animation-delay: 1.05s;
+          animation-delay: 1.05s;
+}
+
+.animation-container span:nth-child(25n+22) {
+  background-color: #213059;
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
+}
+
+.animation-container span:nth-child(25n+23) {
+  background-color: #213056;
+  -webkit-animation-delay: 1.15s;
+          animation-delay: 1.15s;
+}
+
+.animation-container span:nth-child(25n+24) {
+  background-color: #213053;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.animation-container span:nth-child(25n+25) {
+  background-color: #213050;
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
 }
